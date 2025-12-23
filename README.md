@@ -239,7 +239,7 @@ npm run dev
 
 ISC
 
----
+## Built By
 
-Made with 💖 for Renata by Victor
+Victor - TripleTen Web Development Bootcamp Final Project
 
