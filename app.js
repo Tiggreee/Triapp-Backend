@@ -17,7 +17,13 @@ const limiter = rateLimit({
   max: 100,
 });
 
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI)
+  .then(() => console.log('MongoDB connected'))
+  .catch((err) => console.error('MongoDB connection error:', err));
+
+mongoose.connection.on('error', (err) => {
+  console.error('MongoDB error:', err);
+});
 
 app.use(helmet());
 app.use(cors());
