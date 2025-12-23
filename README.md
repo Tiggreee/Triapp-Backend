@@ -227,7 +227,17 @@ server {
 
 ## Deployment URL
 
-**API Base URL**: _Coming soon..._
+**API Base URL**: https://triapp-backend.onrender.com
+
+**Live Endpoints:**
+- POST https://triapp-backend.onrender.com/signup
+- POST https://triapp-backend.onrender.com/signin
+- GET https://triapp-backend.onrender.com/users/me
+- GET https://triapp-backend.onrender.com/favorites
+- POST https://triapp-backend.onrender.com/favorites
+- DELETE https://triapp-backend.onrender.com/favorites/:id
+
+**Hosting:** Render (Free tier - spins down after 15 min inactivity)
 
 ## License
 
