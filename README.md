@@ -1,5 +1,9 @@
 # TriApp Backend
 
+## 🚀 **[VER PROYECTO EN VIVO →](https://tri-app-frontend.vercel.app/music)**
+
+<sub>**Full-Stack Project** | Frontend: [github.com/Tiggreee/TriApp-Frontend](https://github.com/Tiggreee/TriApp-Frontend) | Backend: [github.com/Tiggreee/Triapp-Backend](https://github.com/Tiggreee/Triapp-Backend)</sub>
+
 Backend API for Renata's Finder app. Provides authentication, user management, and favorites persistence.
 
 ## Features
@@ -242,4 +246,10 @@ ISC
 ## Built By
 
 Victor - TripleTen Web Development Bootcamp Final Project
+
+---
+
+## 🚀 **[VER PROYECTO EN VIVO →](https://tri-app-frontend.vercel.app/music)**
+
+<sub>**Full-Stack Repositories** | Frontend: [github.com/Tiggreee/TriApp-Frontend](https://github.com/Tiggreee/TriApp-Frontend) | Backend: [github.com/Tiggreee/Triapp-Backend](https://github.com/Tiggreee/Triapp-Backend)</sub>
 
