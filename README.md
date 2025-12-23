@@ -156,42 +156,51 @@ In production (server):
 - Use strong `JWT_SECRET`
 - Use MongoDB Atlas or secure MongoDB instance
 
-## Deployment (Google Cloud VM)
+## Deployment
 
-1. **Create VM** on Google Cloud (Ubuntu recommended)
-2. **Install Node.js** and **MongoDB** (or use MongoDB Atlas)
-3. **Clone repo** on server
-4. **Install deps**: `npm install --production`
-5. **Create `.env`** with production values
-6. **Start app**: `npm start` (or use PM2 for process management)
-7. **Setup domain**: Point DNS A record to VM public IP
-8. **Install SSL certificate** (Let's Encrypt): `sudo certbot --nginx`
-9. **Configure Nginx** as reverse proxy to Node.js app
+**Status**: ✅ Deployed on Render.com (free tier)
 
-Example Nginx config:
-```nginx
-server {
-  listen 80;
-  server_name yourdomain.com;
-  return 301 https://$host$request_uri;
-}
+### Current Production Environment
 
-server {
-  listen 443 ssl;
-  server_name yourdomain.com;
+- **API Base URL**: https://triapp-backend.onrender.com
+- **Database**: MongoDB Atlas (cluster "tigerDev")
+- **Hosting Platform**: Render.com
+- **Port**: 443 (HTTPS)
 
-  ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
-  ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
+### Live Endpoints
 
-  location / {
-    proxy_pass http://localhost:3000;
-    proxy_http_version 1.1;
-    proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection 'upgrade';
-    proxy_set_header Host $host;
-    proxy_cache_bypass $http_upgrade;
-  }
-}
+```
+POST   https://triapp-backend.onrender.com/signup
+POST   https://triapp-backend.onrender.com/signin
+GET    https://triapp-backend.onrender.com/users/me
+GET    https://triapp-backend.onrender.com/favorites
+POST   https://triapp-backend.onrender.com/favorites
+DELETE https://triapp-backend.onrender.com/favorites/:id
+```
+
+### Notes
+
+- Render free tier: App spins down after 15 min of inactivity
+- MongoDB Atlas free tier: 512 MB storage
+- All sensitive data stored in server environment variables
+- Git integration: Auto-deploy from GitHub commits
+
+### Deploy Locally
+
+To test locally before pushing:
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env file
+cp .env.example .env
+# Edit with your MongoDB URI and JWT secret
+
+# Start dev server (hot reload)
+npm run dev
+
+# Runs on http://localhost:3000
 ```
 
 ## Logging
@@ -215,29 +224,16 @@ server {
 - No code comments (self-documenting code)
 - Consistent 2-space indentation (.editorconfig)
 - Semantic commit messages
+- Clean, idiomatic JavaScript
 
 ## Development Workflow
 
 1. Create feature branch from `stage-back-end`
-2. Implement feature (no comments in code)
+2. Implement feature with no comments in code
 3. Test locally with MongoDB
 4. Commit with semantic message (feat/fix/chore/docs)
-5. Open PR to `stage-back-end`
-6. After review, merge to `main`
-
-## Deployment URL
-
-**API Base URL**: https://triapp-backend.onrender.com
-
-**Live Endpoints:**
-- POST https://triapp-backend.onrender.com/signup
-- POST https://triapp-backend.onrender.com/signin
-- GET https://triapp-backend.onrender.com/users/me
-- GET https://triapp-backend.onrender.com/favorites
-- POST https://triapp-backend.onrender.com/favorites
-- DELETE https://triapp-backend.onrender.com/favorites/:id
-
-**Hosting:** Render (Free tier - spins down after 15 min inactivity)
+5. Open PR to review
+6. After approval, merge to `main` and Render auto-deploys
 
 ## License
 
