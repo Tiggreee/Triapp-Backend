@@ -2,8 +2,8 @@
 
 ## 🚀 **[VER PROYECTO EN VIVO →](https://tri-app-frontend.vercel.app/music)**
 
-**Full-Stack Project**  
-Frontend: [github.com/Tiggreee/TriApp-Frontend](https://github.com/Tiggreee/TriApp-Frontend)  
+**Full-Stack Project**
+Frontend: [github.com/Tiggreee/TriApp-Frontend](https://github.com/Tiggreee/TriApp-Frontend)
 Backend: [github.com/Tiggreee/Triapp-Backend](https://github.com/Tiggreee/Triapp-Backend)
 
 ---
@@ -255,7 +255,7 @@ Victor - TripleTen Web Development Bootcamp Final Project
 
 ## 🚀 **[VER PROYECTO EN VIVO →](https://tri-app-frontend.vercel.app/music)**
 
-**Full-Stack Repositories**  
-Frontend: [github.com/Tiggreee/TriApp-Frontend](https://github.com/Tiggreee/TriApp-Frontend)  
+**Full-Stack Repositories**
+Frontend: [github.com/Tiggreee/TriApp-Frontend](https://github.com/Tiggreee/TriApp-Frontend)
 Backend: [github.com/Tiggreee/Triapp-Backend](https://github.com/Tiggreee/Triapp-Backend)
 
