@@ -10,6 +10,9 @@ Backend: [github.com/Tiggreee/Triapp-Backend](https://github.com/Tiggreee/Triapp
 
 Backend API for Renata's Finder app. Provides authentication, user management, and favorites persistence.
 
+BACKEND ON RENDER: https://triapp-backend.onrender.com
+
+
 ## Features
 
 - JWT authentication (signup/signin)
@@ -249,7 +252,7 @@ ISC
 
 ## Built By
 
-Victor - TripleTen Web Development Bootcamp Final Project
+Victor - TripleTen Web Development TripleTen Final Project
 
 ---
 
@@ -258,4 +261,13 @@ Victor - TripleTen Web Development Bootcamp Final Project
 **Full-Stack Repositories**
 Frontend: [github.com/Tiggreee/TriApp-Frontend](https://github.com/Tiggreee/TriApp-Frontend)
 Backend: [github.com/Tiggreee/Triapp-Backend](https://github.com/Tiggreee/Triapp-Backend)
+
+---
+
+**Update hotfix:**
+Recuerda que para que el frontend se comunique con el backend en producción, tienes que agregar la variable VITE_API_BASE_URL en Vercel. Ve a Settings → Environment Variables y pon:
+
+VITE_API_BASE_URL=https://triapp-backend.onrender.com
+
+No la marques como Sensitive, y redeploya el proyecto. Si no la pones, el login y favoritos no van a funcionar.
 
