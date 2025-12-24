@@ -265,9 +265,7 @@ Backend: [github.com/Tiggreee/Triapp-Backend](https://github.com/Tiggreee/Triapp
 ---
 
 **Update hotfix:**
-Recuerda que para que el frontend se comunique con el backend en producción, tienes que agregar la variable VITE_API_BASE_URL en Vercel. Ve a Settings → Environment Variables y pon:
 
 VITE_API_BASE_URL=https://triapp-backend.onrender.com
 
-No la marques como Sensitive, y redeploya el proyecto. Si no la pones, el login y favoritos no van a funcionar.
 
